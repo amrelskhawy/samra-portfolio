@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mohammed Samir – Marketing Strategist helping businesses grow with data-driven strategies." />
+  <title>Mohammed Samir | Marketing Strategist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">
+        <img src="2.png" alt="MS" class="nav-brand-logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#results">Results</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#results" onclick="closeMobile()">Results</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <!-- Flowing wave background -->
+    <div class="hero-bg">
+      <div class="hero-wave hw1"></div>
+      <div class="hero-wave hw2"></div>
+      <div class="hero-wave hw3"></div>
+    </div>
+
+    <!-- Giant display name -->
+    <div class="hero-name-block" aria-label="Mohammed Samir">
+      <span class="hn-line hn-1">MOHAMED</span>
+      <p class="hn-tagline">Elevate Your Brand.</p>
+      <span class="hn-line hn-2">SAMIR</span>
+    </div>
+
+    <!-- 3D Marketing Visual -->
+    <div class="hero-mktg">
+      <div class="mktg-scene">
+
+        <!-- Glow backdrop -->
+        <div class="mktg-glow"></div>
+
+        <!-- Main dashboard card -->
+        <div class="mktg-card">
+          <div class="mktg-card-header">
+            <span class="mktg-dot d1"></span>
+            <span class="mktg-dot d2"></span>
+            <span class="mktg-dot d3"></span>
+            <span class="mktg-card-lbl">Campaign Analytics</span>
+            <span class="mktg-live"><span class="mktg-live-dot"></span>Live</span>
+          </div>
+          <div class="mktg-bars">
+            <div class="mktg-bar" style="--h:55%;--d:0.0s"></div>
+            <div class="mktg-bar" style="--h:78%;--d:0.08s"></div>
+            <div class="mktg-bar" style="--h:42%;--d:0.16s"></div>
+            <div class="mktg-bar" style="--h:92%;--d:0.24s"></div>
+            <div class="mktg-bar" style="--h:66%;--d:0.32s"></div>
+            <div class="mktg-bar" style="--h:100%;--d:0.40s"></div>
+            <div class="mktg-bar" style="--h:84%;--d:0.48s"></div>
+            <div class="mktg-bar" style="--h:58%;--d:0.56s"></div>
+          </div>
+          <div class="mktg-trend">
+            <svg viewBox="0 0 240 44" fill="none" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#A855F7" />
+                  <stop offset="100%" stop-color="#8B2FE8" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <polygon points="0,38 35,30 70,24 105,18 140,13 175,9 210,5 240,2 240,44 0,44" fill="url(#tg)"
+                opacity="0.25" />
+              <polyline points="0,38 35,30 70,24 105,18 140,13 175,9 210,5 240,2" stroke="#A855F7" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+          </div>
+          <div class="mktg-metrics">
+            <div class="mktg-m"><span class="mktg-mv up">+340%</span><span class="mktg-ml">ROI</span></div>
+            <div class="mktg-m"><span class="mktg-mv">150+</span><span class="mktg-ml">Campaigns</span></div>
+            <div class="mktg-m"><span class="mktg-mv up">95%</span><span class="mktg-ml">Success</span></div>
+          </div>
+        </div>
+
+        <!-- Floating chips -->
+        <div class="mktg-chip mktg-chip-1">
+          <span class="mktg-chip-ico">📈</span>
+          <div>
+            <div class="mktg-chip-v">+280%</div>
+            <div class="mktg-chip-l">Lead Growth</div>
+          </div>
+        </div>
+        <div class="mktg-chip mktg-chip-2">
+          <span class="mktg-chip-ico">🎯</span>
+          <div>
+            <div class="mktg-chip-v">4× ROAS</div>
+            <div class="mktg-chip-l">Ad Return</div>
+          </div>
+        </div>
+        <div class="mktg-chip mktg-chip-3">
+          <span class="mktg-chip-ico">⚡</span>
+          <div>
+            <div class="mktg-chip-v">−50%</div>
+            <div class="mktg-chip-l">CAC Reduced</div>
+          </div>
+        </div>
+
+        <!-- Orbit rings -->
+        <div class="mktg-orbit mktg-orbit-1"></div>
+        <div class="mktg-orbit mktg-orbit-2"></div>
+      </div>
+    </div>
+
+    <!-- Bottom row -->
+    <div class="hero-foot">
+      <p class="hero-caption">
+        Get Your Strategic Edge: Where Precision Meets<br>
+        Performance with Mohamed Samir.
+      </p>
+      <button class="hero-scroll-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})"
+        aria-label="Scroll down">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+      <div class="hero-socials">
+        <a href="#" class="hs-link" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="5" />
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+          </svg>
+        </a>
+        <a href="#" class="hs-link" aria-label="Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
+        <a href="#" class="hs-link" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+        <a href="#" class="hs-link" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+
+      <div class="about-head reveal">
+        <h2 class="about-title">ABOUT ME</h2>
+        <p class="about-sub">Strategy in its purest form.</p>
+      </div>
+
+      <div class="about-body reveal reveal-delay-1">
+        <p>Mohammed Samir is a marketing strategist renowned for delivering unmatched growth through data-driven
+          strategies. With over 8 years of experience, he blends advanced market research and consumer psychology to
+          create exceptional results for ambitious brands across industries — from startups to established enterprises.
+        </p>
+        <p>He is renowned for his precision-crafted campaigns and captivating brand positioning, earning recognition for
+          the unique fusion of strategic clarity and measurable execution. As a leader in growth marketing, he combines
+          top-tier strategy with real, trackable business impact that goes straight to the bottom line.</p>
+      </div>
+
+      <div class="about-gallery reveal reveal-delay-2">
+        <div class="ag-item">
+          <div class="ag-visual ag-v1">
+            <div class="ag-pattern"></div>
+            <div class="ag-stat-overlay"><span class="ag-big">340%</span><span class="ag-lbl">Avg. ROI</span></div>
+          </div>
+          <div class="ag-foot"><span class="ag-num">01</span><span class="ag-label">Marketing Strategy</span></div>
+        </div>
+        <div class="ag-item">
+          <div class="ag-visual ag-v2">
+            <div class="ag-pattern"></div>
+            <div class="ag-stat-overlay"><span class="ag-big">150+</span><span class="ag-lbl">Campaigns</span></div>
+          </div>
+          <div class="ag-foot"><span class="ag-num">02</span><span class="ag-label">Brand Campaigns</span></div>
+        </div>
+        <div class="ag-item">
+          <div class="ag-visual ag-v3">
+            <div class="ag-pattern"></div>
+            <div class="ag-stat-overlay"><span class="ag-big">95%</span><span class="ag-lbl">Client Retention</span>
+            </div>
+          </div>
+          <div class="ag-foot"><span class="ag-num">03</span><span class="ag-label">Growth Results</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES CAROUSEL ===================== -->
+  <section class="svc-section" id="services">
+    <div class="svc-header">
+      <div class="svc-eyebrow">What I Do</div>
+      <h2 class="svc-title">SERVICES</h2>
+    </div>
+
+    <div class="svc-pill">
+
+      <button class="svc-nav svc-nav-prev" id="svcPrev" aria-label="Previous service">
+        <span class="svc-nav-arrow">‹</span>
+      </button>
+
+      <div class="svc-track-outer">
+        <div class="svc-track" id="svcTrack">
+          <!-- side left -->
+          <div class="svc-card svc-side" id="svcLeft">
+            <div class="svc-card-icon" id="svcLeftIcon">🎯</div>
+            <div class="svc-card-name" id="svcLeftName">Marketing Strategy</div>
+            <div class="svc-card-tag" id="svcLeftTag">Strategy</div>
+          </div>
+          <!-- center main -->
+          <div class="svc-card svc-main" id="svcCenter">
+            <div class="svc-main-icon" id="svcCenterIcon">💡</div>
+            <div class="svc-main-name" id="svcCenterName">Brand Positioning</div>
+            <div class="svc-main-desc" id="svcCenterDesc">Define what makes you uniquely valuable. We craft a compelling
+              narrative that resonates with your ideal audience and differentiates you from competitors.</div>
+          </div>
+          <!-- side right -->
+          <div class="svc-card svc-side" id="svcRight">
+            <div class="svc-card-icon" id="svcRightIcon">🚀</div>
+            <div class="svc-card-name" id="svcRightName">Growth Marketing</div>
+            <div class="svc-card-tag" id="svcRightTag">Growth</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="svc-nav svc-nav-next" id="svcNext" aria-label="Next service">
+        <span class="svc-nav-arrow">›</span>
+      </button>
+
+    </div>
+
+    <div class="svc-dots" id="svcDots"></div>
+  </section>
+
+  <!-- ===================== RESULTS / COLLECTION ===================== -->
+  <section class="results-section" id="results">
+    <div class="container rs-wrap">
+      <div class="rs-left reveal">
+        <h2 class="rs-heading">MOHAMMED<br>SAMIR</h2>
+        <p class="rs-sub">Marketing Strategy</p>
+      </div>
+      <div class="rs-right reveal reveal-delay-1">
+        <div class="rs-stats">
+          <div class="rs-stat">
+            <div class="rs-val" data-count="340" data-suffix="%">0%</div>
+            <div class="rs-lbl">Avg. ROI</div>
+          </div>
+          <div class="rs-stat">
+            <div class="rs-val" data-count="80" data-suffix="+">0</div>
+            <div class="rs-lbl">Clients</div>
+          </div>
+          <div class="rs-stat">
+            <div class="rs-val" data-count="150" data-suffix="+">0</div>
+            <div class="rs-lbl">Campaigns</div>
+          </div>
+          <div class="rs-stat">
+            <div class="rs-val" data-count="95" data-suffix="%">0%</div>
+            <div class="rs-lbl">Success Rate</div>
+          </div>
+        </div>
+        <div class="rs-pagination">
+          <span class="rs-pg-active">01</span>
+          <span class="rs-pg-line"></span>
+          <span class="rs-pg">02</span>
+          <span class="rs-pg">03</span>
+          <span class="rs-pg">04</span>
+          <span class="rs-pg">05</span>
+        </div>
+        <div class="rs-socials">
+          <a href="#">TW</a>
+          <a href="#">IN</a>
+          <a href="#">FB</a>
+        </div>
+      </div>
+    </div><!-- /.container.rs-wrap -->
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testi-section" id="testimonials">
+    <div class="container">
+      <div class="testi-head reveal">
+        <span class="eyebrow">Client Love</span>
+        <h2 class="testi-title">WHAT CLIENTS SAY</h2>
+      </div>
+      <div class="slider-container reveal reveal-delay-1">
+        <div class="slider-track" id="sliderTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Mohammed completely transformed our digital marketing approach. Within six
+              months, our lead volume tripled and our cost per acquisition dropped by 45%. His strategic thinking is
+              unlike anyone we've worked with.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AK</div>
+              <div>
+                <div class="testimonial-name">Ahmed Khalil</div>
+                <div class="testimonial-role">CEO, TechVentures MENA</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">The brand positioning work gave our team absolute clarity on who we are and who
+              we serve. Our messaging is finally consistent and our conversion rates jumped 60% in Q1.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SR</div>
+              <div>
+                <div class="testimonial-name">Sara Ramirez</div>
+                <div class="testimonial-role">CMO, GrowthLab Agency</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Working with Mohammed feels like having a growth co-founder. He doesn't just
+              give you a deck — he's in the trenches with you. Our e-commerce revenue grew 4x in eight months.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">LN</div>
+              <div>
+                <div class="testimonial-name">Layla Nasser</div>
+                <div class="testimonial-role">CEO, Bloom E-commerce</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">I hired Mohammed for a market entry strategy and the depth of research and
+              clarity he delivered was extraordinary. We exceeded our Year 1 targets by 40%.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MH</div>
+              <div>
+                <div class="testimonial-name">Marco Hassan</div>
+                <div class="testimonial-role">Founder, Nexus Retail</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="slidePrev" aria-label="Previous">←</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="slideNext" aria-label="Next">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="cs-inner">
+        <div class="cs-info reveal">
+          <span class="eyebrow">Get In Touch</span>
+          <h2 class="cs-headline">LET'S GROW<br>YOUR BUSINESS</h2>
+          <p class="cs-desc">Ready to build a strategy that actually moves the needle? Let's talk about your goals, your
+            market, and how we can create measurable growth — together.</p>
+          <div class="cs-links">
+            <a href="mailto:hello@mohammedsamir.com" class="cs-link">
+              <span class="cs-link-icon">📧</span>
+              <div>
+                <div class="cs-link-label">Email</div>
+                <div class="cs-link-val">hello@mohammedsamir.com</div>
+              </div>
+            </a>
+            <a href="tel:+201000000000" class="cs-link">
+              <span class="cs-link-icon">📞</span>
+              <div>
+                <div class="cs-link-label">Phone</div>
+                <div class="cs-link-val">+20 100 000 0000</div>
+              </div>
+            </a>
+            <a href="#" class="cs-link">
+              <span class="cs-link-icon">💼</span>
+              <div>
+                <div class="cs-link-label">LinkedIn</div>
+                <div class="cs-link-val">linkedin.com/in/mohammedsamir</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="cs-form reveal reveal-delay-2" id="contactForm" novalidate>
+          <h3 class="form-title">Send a Message</h3>
+          <p class="form-sub">I typically respond within 24 hours.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company / Brand</label>
+            <input type="text" id="company" placeholder="Your company name" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service">
+              <option value="">Select a service…</option>
+              <option>Marketing Strategy</option>
+              <option>Brand Positioning</option>
+              <option>Growth Marketing</option>
+              <option>Digital Campaign Planning</option>
+              <option>Market Analysis</option>
+              <option>Performance Optimization</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Tell me about your goals and challenges…" required></textarea>
+          </div>
+          <button type="submit" class="cs-submit">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="sf-inner">
+        <div class="sf-copy">© 2024 Mohammed Samir. All rights reserved.</div>
+        <div class="sf-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="sf-social">
+          <a href="#" class="sf-soc-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="sf-soc-btn" aria-label="Twitter">𝕏</a>
+          <a href="#" class="sf-soc-btn" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <div class="toast-icon">✅</div>
+    <div class="toast-body">
+      <div class="toast-title">Message Sent!</div>
+      <div class="toast-sub">I'll get back to you within 24 hours.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
