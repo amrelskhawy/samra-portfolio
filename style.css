@@ -1411,7 +1411,6 @@ a {
    CONTACT
 ============================================================ */
 .contact-section {
-  background: var(--bg);
   padding: 100px 0;
 }
 
@@ -1462,6 +1461,20 @@ a {
 
 .cs-link-icon {
   font-size: 1.1rem;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--bg-soft, #f3f4f6);
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.cs-link-icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .cs-link-label {
@@ -1588,7 +1601,7 @@ a {
    FOOTER
 ============================================================ */
 .site-footer {
-  background: var(--bg-white);
+  background: var(--bg);
   border-top: 1px solid var(--border);
   padding: 36px 0;
 }
