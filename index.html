@@ -486,45 +486,28 @@
             </a>
           </div>
         </div>
-        <form class="cs-form reveal reveal-delay-2" id="contactForm" novalidate>
-          <h3 class="form-title">Send a Message</h3>
-          <p class="form-sub">I typically respond within 24 hours.</p>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" placeholder="John" required />
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" placeholder="Smith" required />
-            </div>
+        <div class="cs-qr reveal reveal-delay-2">
+          <div class="cs-qr-badge">Scan to Connect</div>
+          <h3 class="cs-qr-title">Send a Message</h3>
+          <p class="cs-qr-sub">Scan the QR code with your phone camera to open the contact form — or tap the button below.</p>
+          <div class="cs-qr-frame">
+            <div class="cs-qr-corner tl"></div>
+            <div class="cs-qr-corner tr"></div>
+            <div class="cs-qr-corner bl"></div>
+            <div class="cs-qr-corner br"></div>
+            <img class="cs-qr-img"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=0&data=https%3A%2F%2Fforms.gle%2FDA7sStmGzUmXGJJS7"
+              alt="QR code to open the contact form" width="260" height="260" loading="lazy" />
           </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="john@company.com" required />
-          </div>
-          <div class="form-group">
-            <label for="company">Company / Brand</label>
-            <input type="text" id="company" placeholder="Your company name" />
-          </div>
-          <div class="form-group">
-            <label for="service">Service Interested In</label>
-            <select id="service">
-              <option value="">Select a service…</option>
-              <option>Marketing Strategy</option>
-              <option>Brand Positioning</option>
-              <option>Growth Marketing</option>
-              <option>Digital Campaign Planning</option>
-              <option>Market Analysis</option>
-              <option>Performance Optimization</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" placeholder="Tell me about your goals and challenges…" required></textarea>
-          </div>
-          <button type="submit" class="cs-submit">Send Message →</button>
-        </form>
+          <a href="https://forms.gle/DA7sStmGzUmXGJJS7" target="_blank" rel="noopener noreferrer" class="cs-qr-btn">
+            Open Form
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7" />
+              <path d="M8 7h9v9" />
+            </svg>
+          </a>
+          <p class="cs-qr-foot">I typically respond within 24 hours.</p>
+        </div>
       </div>
     </div>
   </section>

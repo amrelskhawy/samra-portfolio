@@ -154,19 +154,7 @@ setInterval(() => {
   goTo(currentSlide >= maxIdx ? 0 : currentSlide + 1);
 }, 5000);
 
-/* ---- Contact form ---- */
-const form  = document.getElementById('contactForm');
-const toast = document.getElementById('toast');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const fname = document.getElementById('fname').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const msg   = document.getElementById('message').value.trim();
-  if (!fname || !email || !msg) { alert('Please fill in the required fields.'); return; }
-  toast.classList.add('show');
-  form.reset();
-  setTimeout(() => toast.classList.remove('show'), 4000);
-});
+/* ---- Contact form replaced with QR card ---- */
 
 /* ---- Active nav highlighting ---- */
 const sections = document.querySelectorAll('section[id]');
