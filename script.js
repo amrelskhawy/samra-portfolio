@@ -1,3 +1,7 @@
+/* ---- Dynamic year ---- */
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 /* ---- Navbar scroll ---- */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
