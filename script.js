@@ -9,7 +9,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* ---- Hamburger menu ---- */
-const hamburger  = document.getElementById('hamburger');
+const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 hamburger.addEventListener('keydown', e => {
@@ -31,11 +31,11 @@ const counterEls = document.querySelectorAll('[data-count]');
 const counterObs = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    const el     = entry.target;
+    const el = entry.target;
     const target = parseInt(el.dataset.count, 10);
     const suffix = el.dataset.suffix || '';
-    const dur    = 1800;
-    const start  = performance.now();
+    const dur = 1800;
+    const start = performance.now();
     function tick(now) {
       const p = Math.min((now - start) / dur, 1);
       const e = 1 - Math.pow(1 - p, 3);
@@ -50,13 +50,13 @@ counterEls.forEach(el => counterObs.observe(el));
 
 /* ---- Services carousel ---- */
 const services = [
-  { icon: '🎯', name: 'Marketing Strategy',      tag: 'Strategy',    desc: 'Comprehensive go-to-market plans built on audience insights and competitive intelligence to give your brand a decisive edge in the market.' },
-  { icon: '💡', name: 'Brand Positioning',        tag: 'Branding',    desc: 'Define what makes you uniquely valuable. We craft a compelling narrative that resonates with your ideal audience and differentiates you from competitors.' },
-  { icon: '🚀', name: 'Growth Marketing',         tag: 'Growth',      desc: 'Identify and unlock scalable growth levers through systematic experimentation across acquisition, activation, retention, and revenue channels.' },
-  { icon: '📊', name: 'Campaign Planning',        tag: 'Campaigns',   desc: 'End-to-end digital campaign architecture — from channel strategy and creative briefing to budget allocation and performance tracking.' },
-  { icon: '🔍', name: 'Market Analysis',          tag: 'Research',    desc: 'Deep-dive research into your market landscape, customer segments, and competitive dynamics to inform smarter strategic decisions.' },
-  { icon: '⚡', name: 'Performance Optimization', tag: 'Optimization',desc: 'Continuous analysis and refinement of live campaigns to maximize ROAS, lower CAC, and sustainably improve conversion rates.' }
-];
+  { icon: '📊', name: 'Integrated Marketing', tag: 'Development', desc: 'Creating unified marketing campaigns across digital and traditional channels to deliver one consistent brand message and maximize customer engagement.' },
+  { icon: '🎯', name: 'Branding & Marketing Strategy', tag: 'Strategy', desc: 'Building strong brand identities and developing strategic marketing plans that help businesses grow, position themselves clearly, and reach the right audience.' },
+  { icon: '📈', name: 'Media Buying', tag: 'Branding', desc: 'Planning and purchasing advertising spaces across platforms like Meta, Google, TikTok, and outdoor media to achieve the best ROI and audience reach.' },
+  { icon: '📋', name: 'Campaign Management', tag: 'Growth', desc: 'Managing marketing campaigns from planning to execution, including performance tracking, optimization, budgeting, and achieving campaign objectives efficiently.' },
+  { icon: '💡', name: 'Content Creation', tag: 'Campaigns', desc: 'Developing creative and engaging content such as social media posts, ad copy, visuals, and storytelling that strengthen brand presence and audience connection.' },
+  { icon: '🎬', name: 'Media Production', tag: 'Research', desc: 'Producing high-quality visual and audio content including photography, videography, commercials, reels, and branded media tailored for marketing purposes.' },
+]
 
 let svcCurrent = 1;
 
@@ -75,19 +75,19 @@ function buildSvcDots() {
 
 function renderCarousel() {
   const n = services.length;
-  const left   = services[(svcCurrent - 1 + n) % n];
+  const left = services[(svcCurrent - 1 + n) % n];
   const center = services[svcCurrent];
-  const right  = services[(svcCurrent + 1) % n];
+  const right = services[(svcCurrent + 1) % n];
 
-  document.getElementById('svcLeftIcon').textContent  = left.icon;
-  document.getElementById('svcLeftName').textContent  = left.name;
-  document.getElementById('svcLeftTag').textContent   = left.tag;
+  document.getElementById('svcLeftIcon').textContent = left.icon;
+  document.getElementById('svcLeftName').textContent = left.name;
+  document.getElementById('svcLeftTag').textContent = left.tag;
   document.getElementById('svcCenterIcon').textContent = center.icon;
   document.getElementById('svcCenterName').textContent = center.name;
   document.getElementById('svcCenterDesc').textContent = center.desc;
-  document.getElementById('svcRightIcon').textContent  = right.icon;
-  document.getElementById('svcRightName').textContent  = right.name;
-  document.getElementById('svcRightTag').textContent   = right.tag;
+  document.getElementById('svcRightIcon').textContent = right.icon;
+  document.getElementById('svcRightName').textContent = right.name;
+  document.getElementById('svcRightTag').textContent = right.tag;
 
   document.querySelectorAll('.svc-dot').forEach((d, i) =>
     d.classList.toggle('active', i === svcCurrent)
@@ -107,10 +107,10 @@ buildSvcDots();
 renderCarousel();
 
 /* ---- Testimonial slider ---- */
-const track    = document.getElementById('sliderTrack');
+const track = document.getElementById('sliderTrack');
 const dotsWrap = document.getElementById('sliderDots');
-const btnPrev  = document.getElementById('slidePrev');
-const btnNext  = document.getElementById('slideNext');
+const btnPrev = document.getElementById('slidePrev');
+const btnNext = document.getElementById('slideNext');
 
 let currentSlide = 0;
 const cards = track.querySelectorAll('.testimonial-card');
@@ -131,10 +131,10 @@ function buildDots() {
 
 function goTo(idx) {
   const visible = getVisibleCount();
-  const maxIdx  = Math.ceil(cards.length / visible) - 1;
-  currentSlide  = Math.max(0, Math.min(idx, maxIdx));
-  const cardW   = track.parentElement.offsetWidth;
-  const offset  = currentSlide * (cardW + 20);
+  const maxIdx = Math.ceil(cards.length / visible) - 1;
+  currentSlide = Math.max(0, Math.min(idx, maxIdx));
+  const cardW = track.parentElement.offsetWidth;
+  const offset = currentSlide * (cardW + 20);
   track.style.transform = `translateX(-${offset}px)`;
   dotsWrap.querySelectorAll('.slider-dot').forEach((d, i) =>
     d.classList.toggle('active', i === currentSlide)
@@ -146,7 +146,7 @@ btnNext.addEventListener('click', () => goTo(currentSlide + 1));
 
 let touchStartX = 0;
 track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-track.addEventListener('touchend',   e => {
+track.addEventListener('touchend', e => {
   const delta = touchStartX - e.changedTouches[0].clientX;
   if (Math.abs(delta) > 40) goTo(delta > 0 ? currentSlide + 1 : currentSlide - 1);
 }, { passive: true });
