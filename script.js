@@ -115,11 +115,114 @@ document.getElementById('svcNext').addEventListener('click', () => {
 buildSvcDots();
 renderCarousel();
 
+/* ---- Clients carousel ---- */
+const clients = [
+  {
+    name: 'Zina',
+    tag: 'Full Brand Build',
+    logo: 'public/LOGO/zina-logo.png',
+    logoBlack: true,
+    useCase: 'For Zina, we built the brand entirely from scratch — starting with creating the brand name, developing its visual identity, and establishing its market positioning from the ground up. Through in-depth market research and competitor analysis, we designed a strategic growth plan focused on building a strong market presence, enhancing customer experience, and driving long-term brand loyalty. Our work also included sales strategy development, social media management, targeted advertising campaigns, and creating a premium after-sales service experience, successfully helping the brand achieve its planned growth and awareness objectives within the targeted timeline.',
+  },
+  {
+    name: 'Abd Elaziz Street',
+    tag: 'Household Supplies',
+    logo: 'public/LOGO/abd-elazez-street.jpg',
+    useCase: 'For Abd Elaziz Street, we built the brand entirely from scratch — starting with naming, brand identity development, and defining its positioning in the household supplies market. We conducted in-depth market research and competitor analysis to design an effective growth strategy focused on sales channels, customer targeting, and market penetration. Our work also included developing and managing marketing campaigns, handling social media presence, and improving customer engagement strategies, which helped establish a strong market presence and achieve the planned business and marketing objectives within the defined timeline.',
+  },
+  {
+    name: 'Cue',
+    tag: 'Fashion Brand',
+    logo: 'public/LOGO/cue.png',
+    useCase: 'For Cue, we started the brand from scratch, building its name, identity, and overall brand direction from the ground up. Through detailed market research and competitor analysis, we shaped a clear positioning strategy tailored to the fashion market and target audience. We also developed and managed the brand\'s social media presence, launched performance-focused advertising campaigns, and ensured a consistent visual and marketing language across all channels, which led to strong brand recognition and the achievement of key growth targets within the planned timeframe.',
+  },
+  {
+    name: 'Mivo',
+    tag: 'Beauty · Saudi & Egypt',
+    logo: 'public/LOGO/mivo.png',
+    useCase: 'For Mivo, a Saudi–Egyptian beauty brand, we built the brand entirely from scratch — starting with naming, brand identity development, and defining its positioning across both the Saudi and Egyptian markets. We conducted in-depth market research and competitor analysis in both regions to create a tailored growth strategy focused on audience targeting, service positioning, and market expansion. Our work also included managing social media presence, executing performance-driven advertising campaigns, and building a consistent brand experience across channels, which helped establish strong regional awareness and achieve the planned growth objectives within the set timeline.',
+  },
+];
+
+let clientCurrent = 0;
+
+function buildClientUI() {
+  const logosWrap = document.getElementById('clientsLogos');
+  const dotsWrap = document.getElementById('clientsDots');
+  if (!logosWrap || !dotsWrap) return;
+
+  logosWrap.innerHTML = '';
+  dotsWrap.innerHTML = '';
+
+  clients.forEach((c, i) => {
+    const tab = document.createElement('button');
+    tab.type = 'button';
+    tab.className = 'clients-logo-btn' + (i === clientCurrent ? ' active' : '');
+    tab.setAttribute('role', 'tab');
+    tab.setAttribute('aria-selected', i === clientCurrent ? 'true' : 'false');
+    tab.setAttribute('aria-label', c.name);
+    const logoImgClass = c.logoBlack ? ' clients-logo--black' : '';
+    tab.innerHTML = `<span class="clients-logo-slot"><img class="${logoImgClass.trim()}" src="${c.logo}" alt="${c.name} logo" /></span>`;
+    tab.addEventListener('click', () => { clientCurrent = i; renderClient(); });
+    logosWrap.appendChild(tab);
+
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'clients-dot' + (i === clientCurrent ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to client ' + (i + 1));
+    dot.addEventListener('click', () => { clientCurrent = i; renderClient(); });
+    dotsWrap.appendChild(dot);
+  });
+}
+
+function renderClient() {
+  const c = clients[clientCurrent];
+  const logoEl = document.getElementById('clientDetailLogo');
+  const nameEl = document.getElementById('clientName');
+  const tagEl = document.getElementById('clientTag');
+  const descEl = document.getElementById('clientUseCase');
+  if (!logoEl || !nameEl || !tagEl || !descEl) return;
+
+  logoEl.src = c.logo;
+  logoEl.alt = c.name + ' logo';
+  logoEl.classList.toggle('clients-logo--black', !!c.logoBlack);
+  nameEl.textContent = c.name;
+  tagEl.textContent = c.tag;
+  descEl.textContent = c.useCase;
+
+  document.querySelectorAll('.clients-logo-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', i === clientCurrent);
+    btn.setAttribute('aria-selected', i === clientCurrent ? 'true' : 'false');
+  });
+  document.querySelectorAll('.clients-dot').forEach((d, i) =>
+    d.classList.toggle('active', i === clientCurrent)
+  );
+}
+
+const clientsPrev = document.getElementById('clientsPrev');
+const clientsNext = document.getElementById('clientsNext');
+if (clientsPrev && clientsNext) {
+  clientsPrev.addEventListener('click', () => {
+    clientCurrent = (clientCurrent - 1 + clients.length) % clients.length;
+    renderClient();
+  });
+  clientsNext.addEventListener('click', () => {
+    clientCurrent = (clientCurrent + 1) % clients.length;
+    renderClient();
+  });
+  buildClientUI();
+  renderClient();
+}
+
 /* ---- Testimonial slider ---- */
 const track = document.getElementById('sliderTrack');
 const dotsWrap = document.getElementById('sliderDots');
 const btnPrev = document.getElementById('slidePrev');
 const btnNext = document.getElementById('slideNext');
+
+if (!track || !dotsWrap || !btnPrev || !btnNext) {
+  /* testimonials section not in DOM */
+} else {
 
 let currentSlide = 0;
 const cards = track.querySelectorAll('.testimonial-card');
@@ -166,6 +269,8 @@ setInterval(() => {
   const maxIdx = Math.ceil(cards.length / getVisibleCount()) - 1;
   goTo(currentSlide >= maxIdx ? 0 : currentSlide + 1);
 }, 5000);
+
+}
 
 /* ---- Contact form replaced with QR card ---- */
 

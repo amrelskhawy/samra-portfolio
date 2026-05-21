@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=1.1" />
+  <link rel="stylesheet" href="style.css?v=1.6" />
 </head>
 
 <body>
@@ -29,6 +29,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#clients">Clients</a></li>
         <li><a href="#results">Results</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -42,6 +43,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="closeMobile()">About</a>
     <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#clients" onclick="closeMobile()">Clients</a>
     <a href="#results" onclick="closeMobile()">Results</a>
     <a href="#contact" onclick="closeMobile()">Contact</a>
   </div>
@@ -301,6 +303,42 @@
     <div class="svc-dots" id="svcDots"></div>
   </section>
 
+  <!-- ===================== CLIENTS ===================== -->
+  <section class="clients-section" id="clients">
+    <div class="clients-header reveal">
+      <div class="clients-eyebrow">Brand Work</div>
+      <h2 class="clients-title">CLIENTS</h2>
+      <p class="clients-sub">From naming and identity to growth strategy — select a client to read the full case.</p>
+    </div>
+
+    <div class="clients-panel reveal reveal-delay-1">
+      <div class="clients-logos" id="clientsLogos" role="tablist" aria-label="Select client"></div>
+
+      <div class="clients-detail">
+        <button class="clients-nav clients-nav-prev" id="clientsPrev" aria-label="Previous client">
+          <span class="clients-nav-arrow">‹</span>
+        </button>
+
+        <article class="clients-card">
+          <div class="clients-card-logo-wrap">
+            <img class="clients-card-logo clients-logo--black" id="clientDetailLogo" src="public/LOGO/zina-logo.png" alt="Zina logo" />
+          </div>
+          <div class="clients-card-body">
+            <span class="clients-card-tag" id="clientTag">Full Brand Build</span>
+            <h3 class="clients-card-name" id="clientName">Zina</h3>
+            <p class="clients-card-desc" id="clientUseCase">For Zina, we built the brand entirely from scratch — starting with creating the brand name, developing its visual identity, and establishing its market positioning from the ground up. Through in-depth market research and competitor analysis, we designed a strategic growth plan focused on building a strong market presence, enhancing customer experience, and driving long-term brand loyalty. Our work also included sales strategy development, social media management, targeted advertising campaigns, and creating a premium after-sales service experience, successfully helping the brand achieve its planned growth and awareness objectives within the targeted timeline.</p>
+          </div>
+        </article>
+
+        <button class="clients-nav clients-nav-next" id="clientsNext" aria-label="Next client">
+          <span class="clients-nav-arrow">›</span>
+        </button>
+      </div>
+
+      <div class="clients-dots" id="clientsDots"></div>
+    </div>
+  </section>
+
   <!-- ===================== RESULTS / COLLECTION ===================== -->
   <section class="results-section" id="results">
     <div class="container rs-wrap">
@@ -543,6 +581,7 @@
         <div class="sf-links">
           <a href="#about">About</a>
           <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="sf-social">
@@ -602,7 +641,7 @@
     </div>
   </div>
 
-  <script src="script.js?v=1.1"></script>
+  <script src="script.js?v=1.6"></script>
 </body>
 
 </html>
