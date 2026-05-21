@@ -1272,8 +1272,9 @@ a {
 
 .clients-detail {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   gap: 20px;
+  min-height: 400px;
 }
 
 .clients-nav {
@@ -1311,15 +1312,18 @@ a {
 .clients-card {
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(220px, 300px) 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 36px;
-  align-items: center;
+  align-items: stretch;
   background: var(--bg-dark);
   border-radius: 28px;
   padding: 40px 44px;
   position: relative;
   overflow: hidden;
-  min-height: 300px;
+  height: 400px;
+  min-height: 400px;
+  max-height: 400px;
+  box-sizing: border-box;
 }
 
 .clients-card::before {
@@ -1349,12 +1353,17 @@ a {
   z-index: 1;
   background: var(--bg-white);
   border-radius: 20px;
-  padding: 24px 28px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
   width: 100%;
+  height: 240px;
+  min-height: 240px;
+  max-height: 240px;
+  box-sizing: border-box;
+  align-self: center;
+  flex-shrink: 0;
 }
 
 .clients-logo--black {
@@ -1364,8 +1373,9 @@ a {
 .clients-card-logo {
   display: block;
   width: 100%;
-  height: 160px;
-  max-width: 240px;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   object-position: center;
 }
@@ -1373,6 +1383,11 @@ a {
 .clients-card-body {
   position: relative;
   z-index: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .clients-card-tag {
@@ -2363,6 +2378,7 @@ a {
   .clients-detail {
     flex-direction: column;
     gap: 16px;
+    min-height: auto;
   }
 
   .clients-nav {
@@ -2371,21 +2387,26 @@ a {
 
   .clients-card {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
     padding: 28px 24px;
     text-align: center;
+    height: auto;
+    min-height: 520px;
+    max-height: none;
   }
 
   .clients-card-logo-wrap {
     max-width: 280px;
     width: 100%;
-    min-height: 160px;
+    height: 180px;
+    min-height: 180px;
+    max-height: 180px;
     margin: 0 auto;
   }
 
-  .clients-card-logo {
-    height: 120px;
-    max-width: 220px;
+  .clients-card-body {
+    overflow-y: visible;
+    justify-content: flex-start;
   }
 
   .clients-card-desc {
