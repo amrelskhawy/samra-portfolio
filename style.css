@@ -601,7 +601,16 @@ a {
 }
 
 .mktg-chip-ico {
-  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.mktg-chip-ico svg {
+  width: 18px;
+  height: 18px;
 }
 
 .mktg-chip-v {
@@ -1024,9 +1033,17 @@ a {
 }
 
 .svc-card-icon {
+  display: flex;
+  align-items: center;
   font-size: 2.2rem;
   margin-bottom: auto;
   padding-bottom: 20px;
+  color: var(--gold);
+}
+
+.svc-card-icon svg {
+  width: 1em;
+  height: 1em;
 }
 
 .svc-card-name {
@@ -1082,11 +1099,19 @@ a {
 }
 
 .svc-main-icon {
+  display: flex;
+  align-items: center;
   font-size: 2.8rem;
   margin-bottom: auto;
   padding-bottom: 24px;
   position: relative;
   z-index: 1;
+  color: var(--gold);
+}
+
+.svc-main-icon svg {
+  width: 1em;
+  height: 1em;
 }
 
 .svc-main-name {
@@ -1843,7 +1868,15 @@ a {
 }
 
 .toast-icon {
-  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #22c55e;
+}
+
+.toast-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .toast-title {

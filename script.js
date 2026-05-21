@@ -48,16 +48,25 @@ const counterObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 counterEls.forEach(el => counterObs.observe(el));
 
-/* ---- Services carousel ---- */
-const services = [
-  { icon: '📊', name: 'Integrated Marketing', tag: 'Development', desc: 'Creating unified marketing campaigns across digital and traditional channels to deliver one consistent brand message and maximize customer engagement.' },
-  { icon: '🎯', name: 'Branding & Marketing Strategy', tag: 'Strategy', desc: 'Building strong brand identities and developing strategic marketing plans that help businesses grow, position themselves clearly, and reach the right audience.' },
-  { icon: '📈', name: 'Media Buying', tag: 'Branding', desc: 'Planning and purchasing advertising spaces across platforms like Meta, Google, TikTok, and outdoor media to achieve the best ROI and audience reach.' },
-  { icon: '📋', name: 'Campaign Management', tag: 'Growth', desc: 'Managing marketing campaigns from planning to execution, including performance tracking, optimization, budgeting, and achieving campaign objectives efficiently.' },
-  { icon: '💡', name: 'Content Creation', tag: 'Campaigns', desc: 'Developing creative and engaging content such as social media posts, ad copy, visuals, and storytelling that strengthen brand presence and audience connection.' },
-  { icon: '🎬', name: 'Media Production', tag: 'Research', desc: 'Producing high-quality visual and audio content including photography, videography, commercials, reels, and branded media tailored for marketing purposes.' },
-]
+/* ---- Service icons (stroke SVGs) ---- */
+const ICONS = {
+  layoutGrid: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>',
+  briefcase: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>',
+  mediaBuying: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M24,8.5v7.5h-3v-4.879l-8,8-6-6-4.81,4.81L.069,15.81l6.931-6.931,6,6,5.879-5.879h-4.879v-3h7.5c1.379,0,2.5,1.121,2.5,2.5Z"/></svg>',
+  clipboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>',
+  penLine: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>',
+  video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>',
+};
 
+const services = [
+  {  icon: 'layoutGrid', name: 'Integrated Marketing', tag: 'Branding', desc: 'Creating unified marketing campaigns across digital and traditional channels to deliver one consistent brand message and maximize customer engagement.' },
+  { icon: 'briefcase', name: 'Branding & Marketing Strategy',      tag: 'Strategy',    desc: '    Building strong brand identities and developing strategic marketing plans that help businesses grow, position themselves clearly, and reach the right audience.' },
+  { icon: 'mediaBuying', name: 'Media Buying',        tag: 'Growth',    desc: 'Planning and purchasing advertising spaces across platforms like Meta, Google, TikTok, and outdoor media to achieve the best ROI and audience reach.' },
+  { icon: 'clipboard', name: 'Campaign Management',         tag: 'Planning',      desc: '    Managing marketing campaigns from planning to execution, including performance tracking, optimization, budgeting, and achieving campaign objectives efficiently.' },
+  { icon: 'penLine', name: 'Content Creation',        tag: 'Content',   desc: '    Developing creative and engaging content such as social media posts, ad copy, visuals, and storytelling that strengthen brand presence and audience connection.' },
+  { icon: 'video', name: 'Media Production',          tag: 'Media',    desc: '    Producing high-quality visual and audio content including photography, videography, commercials, reels, and branded media tailored for marketing purposes.' },
+
+]
 let svcCurrent = 1;
 
 function buildSvcDots() {
@@ -79,13 +88,13 @@ function renderCarousel() {
   const center = services[svcCurrent];
   const right = services[(svcCurrent + 1) % n];
 
-  document.getElementById('svcLeftIcon').textContent = left.icon;
+  document.getElementById('svcLeftIcon').innerHTML = ICONS[left.icon];
   document.getElementById('svcLeftName').textContent = left.name;
   document.getElementById('svcLeftTag').textContent = left.tag;
-  document.getElementById('svcCenterIcon').textContent = center.icon;
+  document.getElementById('svcCenterIcon').innerHTML = ICONS[center.icon];
   document.getElementById('svcCenterName').textContent = center.name;
   document.getElementById('svcCenterDesc').textContent = center.desc;
-  document.getElementById('svcRightIcon').textContent = right.icon;
+  document.getElementById('svcRightIcon').innerHTML = ICONS[right.icon];
   document.getElementById('svcRightName').textContent = right.name;
   document.getElementById('svcRightTag').textContent = right.tag;
 
