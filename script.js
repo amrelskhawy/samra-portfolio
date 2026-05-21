@@ -119,7 +119,7 @@ renderCarousel();
 const clients = [
   {
     name: 'Zina',
-    tag: 'Full Brand Build',
+    tag: 'Dresses Brand',
     logo: 'public/LOGO/zina-logo.png',
     logoBlack: true,
     useCase: 'For Zina, we built the brand entirely from scratch — starting with creating the brand name, developing its visual identity, and establishing its market positioning from the ground up. Through in-depth market research and competitor analysis, we designed a strategic growth plan focused on building a strong market presence, enhancing customer experience, and driving long-term brand loyalty. Our work also included sales strategy development, social media management, targeted advertising campaigns, and creating a premium after-sales service experience, successfully helping the brand achieve its planned growth and awareness objectives within the targeted timeline.',
