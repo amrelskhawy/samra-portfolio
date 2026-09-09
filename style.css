@@ -1383,8 +1383,8 @@ a {
 .clients-card-body {
   position: relative;
   z-index: 1;
+  height: 100%;
   min-height: 0;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1414,6 +1414,11 @@ a {
   color: rgba(255, 255, 255, 0.58);
   line-height: 1.8;
   max-width: 62ch;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 10px;
 }
 
 .clients-dots {
@@ -2407,12 +2412,13 @@ a {
   }
 
   .clients-card-body {
-    overflow-y: visible;
+    height: auto;
     justify-content: flex-start;
   }
 
   .clients-card-desc {
     max-width: none;
+    overflow-y: visible;
   }
 
   /* Results */

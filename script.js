@@ -56,6 +56,7 @@ const ICONS = {
   clipboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>',
   penLine: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>',
   video: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>',
+  code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
 };
 
 const services = [
@@ -65,6 +66,7 @@ const services = [
   { icon: 'clipboard', name: 'Campaign Management',         tag: 'Planning',      desc: '    Managing marketing campaigns from planning to execution, including performance tracking, optimization, budgeting, and achieving campaign objectives efficiently.' },
   { icon: 'penLine', name: 'Content Creation',        tag: 'Content',   desc: '    Developing creative and engaging content such as social media posts, ad copy, visuals, and storytelling that strengthen brand presence and audience connection.' },
   { icon: 'video', name: 'Media Production',          tag: 'Media',    desc: '    Producing high-quality visual and audio content including photography, videography, commercials, reels, and branded media tailored for marketing purposes.' },
+  { icon: 'code', name: 'Software Development',       tag: 'Development', desc: 'Designing and building custom websites, web applications, and digital platforms that support your brand and marketing goals, from landing pages to full-scale systems.' },
 
 ]
 let svcCurrent = 1;
