@@ -193,6 +193,115 @@ const clients = [
     logo: 'public/LOGO/gawaherji-misr.jpg',
     useCase: 'For Gawaherji Misr, a specialized brand in salted fish products, we developed a comprehensive marketing approach focused on improving product presentation, strengthening the brand’s market positioning, and driving sales growth. We worked on professionally presenting and promoting the full product range, highlighting the unique features and value of each product through detailed and targeted marketing communication. We also developed a new pricing structure and introduced innovative packages and offers with differentiated features designed to increase customer value, encourage purchasing, and create a stronger competitive advantage in the market. Through strategic product promotion, optimized pricing, distinctive packages, and targeted advertising campaigns, we achieved significant market reach and strong sales growth, helping the brand expand its customer base and strengthen its market presence.',
   },
+  {
+    name: 'Lily’s',
+    tag: 'Fine Jewelry',
+    logo: "public/LOGO/lily's.png",
+    useCase: 'For Lily’s, a premium jewelry brand specializing in authentic natural gemstones, we developed a complete brand identity designed to reflect the exclusivity, quality, and premium value of its products. We developed and executed a comprehensive advertising strategy across multiple digital platforms, creating tailored campaigns to showcase the products, communicate their unique value, and reach high-intent audiences. Despite the premium nature and higher value of the products, our performance-driven approach successfully generated strong sales results, achieving a 7x ROAS. The strategy helped Lily’s expand its reach, strengthen its premium market positioning, and convert brand awareness into measurable sales growth.',
+  },
+  {
+    name: 'Lazord Café',
+    tag: 'Café',
+    logo: 'public/LOGO/lazord cafe.jpg',
+    useCase: 'For Lazord Café, we developed and executed a comprehensive multi-platform advertising strategy designed to increase brand visibility, attract new customers, and drive real business results. We created and launched creative-driven campaigns across multiple digital platforms, focusing on engaging content and compelling advertising concepts that generated significant reach and strong audience engagement. The campaigns successfully expanded Lazord Café’s visibility and attracted a large number of potential customers, while delivering a strong return in terms of in-café traffic and overall business performance.',
+  },
+  {
+    name: 'Palette Gallery',
+    tag: 'Art Gallery',
+    logo: 'public/LOGO/palette logo png.png',
+    useCase: 'For Palette Gallery, we developed a complete brand identity designed to establish a distinctive and recognizable presence in the market. We then developed and executed creative advertising campaigns across multiple digital platforms, combining strong visual communication with targeted performance marketing to maximize brand exposure and customer engagement. Through this integrated approach, Palette Gallery achieved significant market reach and strong sales performance, generating a ROAS of over 8x.',
+  },
+  {
+    name: 'Abu Shams Wholesale',
+    tag: 'Wholesale Retail',
+    logo: 'public/LOGO/ابو شمس.PNG',
+    logoClass: 'clients-logo--abu-shams',
+    useCase: 'For Abu Shams Wholesale, we developed a complete brand identity designed to create a stronger and more professional market presence. We established an online sales presence across multiple digital platforms, creating a unified approach to product presentation and customer communication while expanding the brand’s reach beyond its traditional customer base. Through targeted digital marketing and online sales strategies, we reached a large number of potential customers and generated increased interest in the brand, contributing to significant growth in showroom visits and customer traffic.',
+  },
+  {
+    name: 'Al Horeya Center',
+    tag: 'Mental Health & Addiction Treatment',
+    logo: 'public/LOGO/الحرية.jpg',
+    useCase: 'For Al Horeya Center for Addiction Treatment and Mental Health, we developed and executed a comprehensive multi-platform advertising strategy designed to increase the center’s visibility and connect its services with people seeking professional support. We launched targeted advertising campaigns across multiple digital platforms, focusing on the geographic areas and audiences most relevant to the center’s services. Through strategic targeting and consistent campaign execution, we expanded the center’s digital reach and increased awareness of its services across the targeted locations.',
+  },
+  {
+    name: 'Rony Pharma',
+    tag: 'Pharmaceutical Distribution',
+    logo: 'public/LOGO/rony pharma.jpg',
+    useCase: 'For Rony Pharma, a company specializing in pharmaceutical products, cosmetics, and personal care products, we developed a digital marketing approach focused on expanding the brand’s online presence and driving sales. We professionally presented the company’s diverse product portfolio across social media, highlighting product features and creating engaging content designed to attract and convert potential customers. Through targeted advertising campaigns and a multi-platform sales strategy, we achieved significant online reach and strong sales across multiple digital channels.',
+  },
+  {
+    name: 'Ayady Center',
+    tag: 'Mental Health & Addiction Treatment',
+    logo: 'public/LOGO/ايادي.jpg',
+    useCase: 'For Ayady Center for Addiction Treatment and Mental Health, we developed and managed a targeted digital advertising strategy aimed at expanding the center’s reach and increasing awareness of its specialized services. We implemented advertising campaigns across various digital platforms, focusing on reaching the right audiences within carefully selected geographic areas. Through strategic audience targeting, creative campaign execution, and continuous performance optimization, we increased the center’s visibility and reached potential patients across the targeted locations.',
+  },
+  {
+    name: 'Al Fares Cranes',
+    tag: 'Cranes & Heavy Equipment',
+    logo: 'public/LOGO/el fares.jpg',
+    useCase: 'For Al Fares Cranes, we developed a complete brand identity designed to establish a professional and distinctive presence within the market. We then implemented an integrated marketing strategy combining advertising across multiple digital platforms with carefully planned offline marketing activities. The strategy focused on expanding brand awareness, reaching relevant target audiences, and strengthening the company’s market presence through a combination of digital and traditional marketing channels.',
+  },
+  {
+    name: 'Sina Nursing Academy',
+    tag: 'Nursing Academy',
+    logo: 'public/LOGO/سينا.jpg',
+    useCase: 'For Sina Nursing Academy, we developed and executed a comprehensive marketing campaign designed to increase awareness, attract prospective students, and drive enrollment bookings. We produced professional media content tailored to communicate the academy’s educational offerings and appeal to its target audience. Alongside the media production, we launched targeted advertising campaigns across multiple digital platforms to maximize reach and generate qualified inquiries. The academy achieved significant visibility and generated bookings through multiple digital channels.',
+  },
+  {
+    name: 'Golden R Café',
+    tag: 'Café',
+    logo: 'public/LOGO/golden R.jpg',
+    useCase: 'For Golden R Café, we developed a complete brand identity designed to create a distinctive and recognizable presence within the local market. We then developed and executed a creative advertising strategy across multiple digital platforms, focusing on differentiated marketing concepts and engaging communication. Through consistent branding, creative campaigns, and targeted digital advertising, we expanded the café’s reach and strengthened its presence across the surrounding market.',
+  },
+  {
+    name: 'El Refaey Sweets',
+    tag: 'Sweets & Desserts',
+    logo: 'public/LOGO/الرفاعي.jpg',
+    useCase: 'For El Refaey Sweets, we developed and executed a comprehensive advertising strategy across multiple digital platforms, with two clear objectives: expanding brand awareness and driving sales. We launched targeted campaigns designed to increase the brand’s visibility, reach a wider audience, and attract potential customers while maintaining a strong focus on generating actual sales. Through strategic campaign execution and continuous performance optimization, we significantly expanded the brand’s reach while generating tangible sales results.',
+  },
+  {
+    name: 'AKG Group',
+    tag: 'Investment Group',
+    logo: 'public/LOGO/akg.png',
+    useCase: 'For AKG Group, we developed a complete corporate brand identity designed to establish a strong, professional, and cohesive presence across its diverse business activities. We developed a comprehensive marketing strategy and structured plan focused on positioning the group as an attractive and credible business platform for potential investors. Through targeted marketing initiatives, AKG Group attracted a significant number of potential investors interested in launching and participating in diverse business activities across multiple sectors.',
+  },
+  {
+    name: 'Tiger Gym',
+    tag: 'Fitness Center',
+    logo: 'public/LOGO/tiger gym.jpg',
+    useCase: 'For Tiger Gym, we developed and executed a comprehensive multi-platform advertising strategy aimed at increasing brand awareness and attracting new customers across the gym’s full range of services. We launched targeted campaigns across various digital platforms, promoting the gym’s services and communicating their value to relevant audiences. Through strategic audience targeting and performance-driven advertising, we expanded Tiger Gym’s reach and successfully attracted customers interested in its services.',
+  },
+  {
+    name: 'Ceramica Royal',
+    tag: 'Ceramics & Finishes',
+    logo: 'public/LOGO/سيراميكا رويال.jpg',
+    useCase: 'For Ceramica Royal, we developed and executed an integrated advertising strategy combining digital campaigns across multiple platforms with offline marketing activities. Our approach was designed to maximize brand visibility, reach relevant audiences across different customer touchpoints, and create a strong market presence through a unified communication strategy. The integrated approach expanded the brand’s reach, generated significant customer demand, and contributed to substantial sales growth.',
+  },
+  {
+    name: 'Verbo Clinic',
+    tag: 'Special Needs Rehabilitation',
+    logo: 'public/LOGO/verbo vlinic.jpg',
+    useCase: 'For Verbo Clinic, a specialized clinic providing rehabilitation and care services for people with special needs, we developed a structured marketing strategy focused on building awareness and connecting the clinic with its target audience. We created distinctive and engaging content to communicate the clinic’s services clearly while building a strong and trustworthy digital presence. Alongside the content strategy, we executed targeted advertising campaigns across multiple digital platforms to expand the clinic’s reach and visibility.',
+  },
+  {
+    name: 'Ultra Progress',
+    tag: 'Digital Business Solutions',
+    logo: 'public/LOGO/up.jpg',
+    useCase: 'For Ultra Progress, a digital business solutions company, we developed a marketing direction focused on positioning the company as a comprehensive technology partner for businesses and organizations. The company provides software development, mobile applications, digital advertising, and integrated business systems. Our approach communicated the value of these solutions in a clear and professional way, highlighting Ultra Progress’s ability to provide integrated digital infrastructure for organizations seeking transformation and automation.',
+  },
+  {
+    name: 'Mend Physiotherapy Center',
+    tag: 'Physiotherapy Center',
+    logo: 'public/LOGO/Mend.jpg',
+    useCase: 'For Mend Physiotherapy Center, we developed a complete brand identity designed to establish a professional, distinctive, and trustworthy presence within the physiotherapy market. We conducted a comprehensive analysis of the market and competitors to identify key opportunities and define a clear positioning for the center. Based on these insights, we developed a structured marketing strategy and action plan focused on increasing brand awareness, reaching the right target audience, and establishing a sustainable path for growth.',
+  },
+  {
+    name: 'Tadawy Hospital',
+    tag: 'Hospital & Healthcare',
+    logo: 'public/LOGO/تداوي.jpg',
+    useCase: 'For Tadawy Hospital, we developed and executed a comprehensive multi-platform advertising strategy designed to expand the hospital’s market presence and connect its medical services with the targeted patient audience. We launched targeted campaigns across multiple digital platforms, promoting the hospital’s specialties and reaching audiences across the targeted geographic areas. Through strategic audience targeting, consistent campaign execution, and performance-focused advertising, we increased the hospital’s visibility and strengthened its presence within the local healthcare market.',
+  },
 ];
 
 let clientCurrent = 0;
@@ -212,8 +321,10 @@ function buildClientUI() {
     tab.setAttribute('role', 'tab');
     tab.setAttribute('aria-selected', i === clientCurrent ? 'true' : 'false');
     tab.setAttribute('aria-label', c.name);
-    const logoImgClass = c.logoBlack ? ' clients-logo--black' : '';
-    tab.innerHTML = `<span class="clients-logo-slot"><img class="${logoImgClass.trim()}" src="${c.logo}" alt="${c.name} logo" /></span>`;
+    const logoImgClass = [c.logoBlack && 'clients-logo--black', c.logoClass]
+      .filter(Boolean)
+      .join(' ');
+    tab.innerHTML = `<span class="clients-logo-slot"><img class="${logoImgClass}" src="${c.logo}" alt="${c.name} logo" /></span>`;
     tab.addEventListener('click', () => { clientCurrent = i; renderClient(); });
     logosWrap.appendChild(tab);
 
@@ -237,6 +348,7 @@ function renderClient() {
   logoEl.src = c.logo;
   logoEl.alt = c.name + ' logo';
   logoEl.classList.toggle('clients-logo--black', !!c.logoBlack);
+  logoEl.classList.toggle('clients-logo--abu-shams', c.logoClass === 'clients-logo--abu-shams');
   nameEl.textContent = c.name;
   tagEl.textContent = c.tag;
   descEl.textContent = c.useCase;

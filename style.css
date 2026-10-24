@@ -1370,6 +1370,11 @@ a {
   filter: brightness(0);
 }
 
+/* The supplied Abu Shams artwork includes generous transparent margins. */
+.clients-logo--abu-shams {
+  transform: scale(3.5);
+}
+
 .clients-card-logo {
   display: block;
   width: 100%;
