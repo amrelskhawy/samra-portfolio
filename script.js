@@ -123,7 +123,7 @@ const clients = [
     name: 'Zina',
     tag: 'Dresses Brand',
     logo: 'public/LOGO/zina-logo.png',
-    logoBlack: true,
+    logoClass: 'clients-logo--zina',
     useCase: 'For Zina, we built the brand entirely from scratch — starting with creating the brand name, developing its visual identity, and establishing its market positioning from the ground up. Through in-depth market research and competitor analysis, we designed a strategic growth plan focused on building a strong market presence, enhancing customer experience, and driving long-term brand loyalty. Our work also included sales strategy development, social media management, targeted advertising campaigns, and creating a premium after-sales service experience, successfully helping the brand achieve its planned growth and awareness objectives within the targeted timeline.',
   },
   {
@@ -203,6 +203,7 @@ const clients = [
     name: 'Lazord Café',
     tag: 'Café',
     logo: 'public/LOGO/lazord cafe.jpg',
+    logoBlack: true,
     useCase: 'For Lazord Café, we developed and executed a comprehensive multi-platform advertising strategy designed to increase brand visibility, attract new customers, and drive real business results. We created and launched creative-driven campaigns across multiple digital platforms, focusing on engaging content and compelling advertising concepts that generated significant reach and strong audience engagement. The campaigns successfully expanded Lazord Café’s visibility and attracted a large number of potential customers, while delivering a strong return in terms of in-café traffic and overall business performance.',
   },
   {
@@ -234,6 +235,7 @@ const clients = [
     name: 'Ayady Center',
     tag: 'Mental Health & Addiction Treatment',
     logo: 'public/LOGO/ايادي.jpg',
+    logoBlack: true,
     useCase: 'For Ayady Center for Addiction Treatment and Mental Health, we developed and managed a targeted digital advertising strategy aimed at expanding the center’s reach and increasing awareness of its specialized services. We implemented advertising campaigns across various digital platforms, focusing on reaching the right audiences within carefully selected geographic areas. Through strategic audience targeting, creative campaign execution, and continuous performance optimization, we increased the center’s visibility and reached potential patients across the targeted locations.',
   },
   {
@@ -252,12 +254,14 @@ const clients = [
     name: 'Golden R Café',
     tag: 'Café',
     logo: 'public/LOGO/golden R.jpg',
+    logoBlack: true,
     useCase: 'For Golden R Café, we developed a complete brand identity designed to create a distinctive and recognizable presence within the local market. We then developed and executed a creative advertising strategy across multiple digital platforms, focusing on differentiated marketing concepts and engaging communication. Through consistent branding, creative campaigns, and targeted digital advertising, we expanded the café’s reach and strengthened its presence across the surrounding market.',
   },
   {
     name: 'El Refaey Sweets',
     tag: 'Sweets & Desserts',
     logo: 'public/LOGO/الرفاعي.jpg',
+    logoBlack: true,
     useCase: 'For El Refaey Sweets, we developed and executed a comprehensive advertising strategy across multiple digital platforms, with two clear objectives: expanding brand awareness and driving sales. We launched targeted campaigns designed to increase the brand’s visibility, reach a wider audience, and attract potential customers while maintaining a strong focus on generating actual sales. Through strategic campaign execution and continuous performance optimization, we significantly expanded the brand’s reach while generating tangible sales results.',
   },
   {
@@ -270,6 +274,7 @@ const clients = [
     name: 'Tiger Gym',
     tag: 'Fitness Center',
     logo: 'public/LOGO/tiger gym.jpg',
+    logoBlack: true,
     useCase: 'For Tiger Gym, we developed and executed a comprehensive multi-platform advertising strategy aimed at increasing brand awareness and attracting new customers across the gym’s full range of services. We launched targeted campaigns across various digital platforms, promoting the gym’s services and communicating their value to relevant audiences. Through strategic audience targeting and performance-driven advertising, we expanded Tiger Gym’s reach and successfully attracted customers interested in its services.',
   },
   {
@@ -288,6 +293,7 @@ const clients = [
     name: 'Ultra Progress',
     tag: 'Digital Business Solutions',
     logo: 'public/LOGO/up.jpg',
+    logoBlack: true,
     useCase: 'For Ultra Progress, a digital business solutions company, we developed a marketing direction focused on positioning the company as a comprehensive technology partner for businesses and organizations. The company provides software development, mobile applications, digital advertising, and integrated business systems. Our approach communicated the value of these solutions in a clear and professional way, highlighting Ultra Progress’s ability to provide integrated digital infrastructure for organizations seeking transformation and automation.',
   },
   {
@@ -300,6 +306,7 @@ const clients = [
     name: 'Tadawy Hospital',
     tag: 'Hospital & Healthcare',
     logo: 'public/LOGO/تداوي.jpg',
+    logoBlack: true,
     useCase: 'For Tadawy Hospital, we developed and executed a comprehensive multi-platform advertising strategy designed to expand the hospital’s market presence and connect its medical services with the targeted patient audience. We launched targeted campaigns across multiple digital platforms, promoting the hospital’s specialties and reaching audiences across the targeted geographic areas. Through strategic audience targeting, consistent campaign execution, and performance-focused advertising, we increased the hospital’s visibility and strengthened its presence within the local healthcare market.',
   },
 ];
@@ -308,32 +315,47 @@ let clientCurrent = 0;
 
 function buildClientUI() {
   const logosWrap = document.getElementById('clientsLogos');
-  const dotsWrap = document.getElementById('clientsDots');
-  if (!logosWrap || !dotsWrap) return;
+  if (!logosWrap) return;
 
   logosWrap.innerHTML = '';
-  dotsWrap.innerHTML = '';
+  const logoTracks = Array.from({ length: 2 }, () => {
+    const track = document.createElement('div');
+    track.className = 'clients-logo-track';
+    logosWrap.appendChild(track);
+    return track;
+  });
 
   clients.forEach((c, i) => {
     const tab = document.createElement('button');
     tab.type = 'button';
+    tab.dataset.clientIndex = i;
     tab.className = 'clients-logo-btn' + (i === clientCurrent ? ' active' : '');
-    tab.setAttribute('role', 'tab');
-    tab.setAttribute('aria-selected', i === clientCurrent ? 'true' : 'false');
+    tab.setAttribute('aria-haspopup', 'dialog');
     tab.setAttribute('aria-label', c.name);
-    const logoImgClass = [c.logoBlack && 'clients-logo--black', c.logoClass]
+    const logoImgClass = [
+      c.logoBlack && 'clients-logo--black',
+      c.logoClass,
+    ]
       .filter(Boolean)
       .join(' ');
     tab.innerHTML = `<span class="clients-logo-slot"><img class="${logoImgClass}" src="${c.logo}" alt="${c.name} logo" /></span>`;
-    tab.addEventListener('click', () => { clientCurrent = i; renderClient(); });
-    logosWrap.appendChild(tab);
+    tab.addEventListener('click', () => openClient(i));
+    logoTracks[i % 2].appendChild(tab);
 
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.className = 'clients-dot' + (i === clientCurrent ? ' active' : '');
-    dot.setAttribute('aria-label', 'Go to client ' + (i + 1));
-    dot.addEventListener('click', () => { clientCurrent = i; renderClient(); });
-    dotsWrap.appendChild(dot);
+
+  });
+
+  // Repeat each row so the animation joins without a visible jump.
+  logoTracks.forEach(track => {
+    Array.from(track.children).forEach(tab => {
+      const copy = tab.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      copy.tabIndex = -1;
+      copy.addEventListener('click', () => {
+        openClient(Number(copy.dataset.clientIndex));
+      });
+      track.appendChild(copy);
+    });
   });
 }
 
@@ -348,33 +370,37 @@ function renderClient() {
   logoEl.src = c.logo;
   logoEl.alt = c.name + ' logo';
   logoEl.classList.toggle('clients-logo--black', !!c.logoBlack);
+  logoEl.classList.toggle('clients-logo--zina', c.logoClass === 'clients-logo--zina');
   logoEl.classList.toggle('clients-logo--abu-shams', c.logoClass === 'clients-logo--abu-shams');
   nameEl.textContent = c.name;
   tagEl.textContent = c.tag;
   descEl.textContent = c.useCase;
 
-  document.querySelectorAll('.clients-logo-btn').forEach((btn, i) => {
-    btn.classList.toggle('active', i === clientCurrent);
-    btn.setAttribute('aria-selected', i === clientCurrent ? 'true' : 'false');
+  document.querySelectorAll('.clients-logo-btn').forEach(btn => {
+    const selected = Number(btn.dataset.clientIndex) === clientCurrent;
+    btn.classList.toggle('active', selected);
   });
-  document.querySelectorAll('.clients-dot').forEach((d, i) =>
-    d.classList.toggle('active', i === clientCurrent)
-  );
 }
 
-const clientsPrev = document.getElementById('clientsPrev');
-const clientsNext = document.getElementById('clientsNext');
-if (clientsPrev && clientsNext) {
-  clientsPrev.addEventListener('click', () => {
-    clientCurrent = (clientCurrent - 1 + clients.length) % clients.length;
-    renderClient();
-  });
-  clientsNext.addEventListener('click', () => {
-    clientCurrent = (clientCurrent + 1) % clients.length;
-    renderClient();
-  });
-  buildClientUI();
+const clientDialog = document.getElementById('clientDialog');
+
+function openClient(index) {
+  clientCurrent = index;
   renderClient();
+  clientDialog.showModal();
+  document.body.classList.add('client-dialog-open');
+}
+
+if (clientDialog) {
+  document.getElementById('clientDialogClose').addEventListener('click', () => clientDialog.close());
+  clientDialog.addEventListener('click', event => {
+    if (event.target !== clientDialog) return;
+    const bounds = clientDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom) clientDialog.close();
+  });
+  clientDialog.addEventListener('close', () => document.body.classList.remove('client-dialog-open'));
+  buildClientUI();
 }
 
 /* ---- Testimonial slider ---- */
